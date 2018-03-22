@@ -9,6 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = 'opentable/win-2012r2-standard-amd64-nocm'
   config.vm.network :private_network, ip: '192.168.50.4'
   config.vm.network :forwarded_port, guest: 3389, host: 3389
+  config.vm.network :forwarded_port, guest: 1433, host: 1433
 
   config.vm.provision :shell, path: 'scripts/provision.ps1'
 

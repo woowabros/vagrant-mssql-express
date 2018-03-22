@@ -27,8 +27,9 @@ More information can be found on the [box page at Vagrant Cloud](https://atlas.h
 ## Usage
 
 ```sh
-git clone https://github.com/mince27/vagrant-mssql-express
+git clone https://github.com/kwon37xi/vagrant-mssql-express.git
 cd vagrant-mssql-express
+wget 'http://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x64/SQLEXPRWT_x64_ENU.exe'
 vagrant up
 ```
 Get a coffee as it will take a while for it to finish provisioning.  The first time it has to download the vagrant box and sql server express.
@@ -36,10 +37,11 @@ Get a coffee as it will take a while for it to finish provisioning.  The first t
 
 ### Connecting to the SQL Server instance that runs inside the VM
 
-* IP / Host: `192.168.50.4`
+* IP / Host: `192.168.50.4
  * The ip will be the private_network value defined in `Vagrantfile`
+ * Port Forwarding이 돼 있으므로 localhost:1433 으로 접속 가능
 * Username: `sa`
-* Password: `password1`
+* Password: `password12!'
  * To change this modify the value in `install-sql-server.cmd`
 
 If you are using Rails you will need the following gems
@@ -56,7 +58,7 @@ development:
   database: <YOUR DB>
   host: 192.168.50.4 # Should match the private_network in Vagrantfile
   username: sa
-  password: 'password1'
+  password: 'password12!'
 ```
 
 _More information on https://github.com/rails-sqlserver/activerecord-sqlserver-adapter/wiki/Using-TinyTDS_
