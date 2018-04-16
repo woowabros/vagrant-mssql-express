@@ -7,6 +7,8 @@ A Windows 2012 Server with SQL Server Express 2012 powered by Vagrant.
 
 ### 설치
 * [Vagrant](https://www.vagrantup.com/) 를 먼저 설치합니다.
+* 설치 과정에서 `http://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x64/SQLEXPRWT_x64_ENU.exe`를 미리 다운받는 것이 좋습니다. wget이 없다면 다른 방법으로 다운받아 두세요.
+
 ```
 git clone git@github.com:woowabros/vagrant-mssql-express.git
 cd vagrant-mssql-express
