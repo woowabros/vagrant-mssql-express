@@ -2,6 +2,23 @@
 
 A Windows 2012 Server with SQL Server Express 2012 powered by Vagrant.
 
+## 
+이 리포지토리는 [mince27/vagrant-mssql-express](https://github.com/mince27/vagrant-mssql-express) 에서 Fork 한 것입니다.
+
+### 설치
+* [Vagrant](https://www.vagrantup.com/) 를 먼저 설치합니다.
+```
+git clone git@github.com:woowabros/vagrant-mssql-express.git
+cd vagrant-mssql-express
+wget http://download.microsoft.com/download/8/D/D/8DD7BDBA-CEF7-4D8E-8C16-D9F69527F909/ENU/x64/SQLEXPRWT_x64_ENU.exe
+vagrant up
+```
+
+### 접속 계정정보
+* localhost:1443
+* username: `sa`
+* password: `password12!`
+
 ##
 
 This repo was forked from [here](https://github.com/fgrehm/vagrant-mssql-express).  It was updated to support Sql Server Express 2012 on Windows Server 2012
