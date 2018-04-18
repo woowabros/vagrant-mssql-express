@@ -16,24 +16,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provider 'virtualbox' do |v|
     host = RbConfig::CONFIG['host_os']
 
-    if host =~ /darwin/
-      cpus = `sysctl -n hw.ncpu`.to_i
-      # sysctl returns Bytes and we need to convert to MB
-      mem = `sysctl -n hw.memsize`.to_i / 1024 / 1024 / 4
-    elsif host =~ /linux/
-      cpus = `nproc`.to_i
-      # meminfo shows KB and we need to convert to MB
-      mem = `grep 'MemTotal' /proc/meminfo | sed -e 's/MemTotal://' -e 's/ kB//'`.to_i / 1024 / 4
-    else
-      cpus = 4
-      mem = 2048
-    end
-
     v.destroy_unused_network_interfaces = true
     v.customize [
       'modifyvm', :id,
-      '--memory', mem,
-      '--cpus', cpus
+      '--memory', 2048,
+      '--cpus', 2
     ]
   end
 end

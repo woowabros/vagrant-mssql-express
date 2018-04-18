@@ -21,6 +21,13 @@ vagrant up
 * username: `sa`
 * password: `password12!`
 
+### CPU/Memory 조정
+원한다면 `Vagrantfile'에서 cpus, memory 값을 원하는 것으로 조정가능하다.
+```
+'--memory', 2048,
+'--cpus', 2
+```
+
 ##
 
 This repo was forked from [here](https://github.com/fgrehm/vagrant-mssql-express).  It was updated to support Sql Server Express 2012 on Windows Server 2012
